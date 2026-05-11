@@ -25,7 +25,7 @@ Crea un nuevo usuario y lo guarda en la memoria del servidor.
 
 | Campo       | Valor                              |
 |-------------|------------------------------------|
-| **URL**     | `http://localhost:3000/auth/signup` |
+| **URL**     | `http://localhost:3000/auth/signup`|
 | **Método**  | `POST`                             |
 | **Headers** | `Content-Type: application/json`   |
 
@@ -64,7 +64,7 @@ Valida que el usuario exista y que la contraseña coincida. Devuelve un token de
 
 | Campo       | Valor                             |
 |-------------|-----------------------------------|
-| **URL**     | `http://localhost:3000/auth/login` |
+| **URL**     | `http://localhost:3000/auth/login`|
 | **Método**  | `POST`                            |
 | **Headers** | `Content-Type: application/json`  |
 
@@ -124,4 +124,4 @@ fetch('http://localhost:3000/auth/login', {
 
 | Situación                                        | Código HTTP       |
 |--------------------------------------------------|-------------------|
-| Contraseña incorrecta o usuario inexistente      | `401 Unauthorized` |
+| Contraseña incorrecta o usuario inexistente      | `401 Unauthorized`|
