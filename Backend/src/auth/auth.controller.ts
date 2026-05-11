@@ -8,12 +8,12 @@ export class AuthController {
   @HttpCode(HttpStatus.OK)
   @Post('login')
   signIn(@Body() signInDto: Record<string, any>) {
-    return this.authService.signIn(signInDto.username, signInDto.password);
+    return this.authService.signIn(signInDto.correo, signInDto.password);
   }
 
   @HttpCode(HttpStatus.CREATED)
   @Post('signup')
   signUp(@Body() signUpDto: Record<string, any>) {
-    return this.authService.signUp(signUpDto.username, signUpDto.password);
+    return this.authService.signUp(signUpDto.nombre, signUpDto.correo, signUpDto.password);
   }
 }

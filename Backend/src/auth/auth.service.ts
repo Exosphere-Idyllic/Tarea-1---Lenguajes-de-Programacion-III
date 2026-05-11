@@ -5,8 +5,8 @@ import { UsersService } from '../users/users.service';
 export class AuthService {
   constructor(private usersService: UsersService) {}
 
-  async signIn(username: string, pass: string): Promise<any> {
-    const user = await this.usersService.findOne(username);
+  async signIn(correo: string, pass: string): Promise<any> {
+    const user = await this.usersService.findOne(correo);
     
     // In a real application, you'd use bcrypt.compare() to check the hashed password
     if (user?.password !== pass) {
@@ -23,11 +23,12 @@ export class AuthService {
     };
   }
 
-  async signUp(username: string, pass: string): Promise<any> {
+  async signUp(nombre: string, correo: string, pass: string): Promise<any> {
     // In a real application, you'd hash the password with bcrypt before saving
     const newUser = {
       id: Math.random().toString(36).substring(7),
-      username,
+      nombre,
+      correo,
       password: pass, // Should be hashed!
     };
     
